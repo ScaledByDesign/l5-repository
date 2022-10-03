@@ -192,7 +192,7 @@ trait CacheableRepository
         /**
          * https://laravel.com/docs/5.8/upgrade#cache-ttl-in-seconds
          */
-        if ($this->versionCompare($this->app->version(), "5.7.*", ">")) {
+        if ($this->versionCompare(app()->version(), "5.7.*", ">")) {
             return $cacheMinutes * 60;
         }
 
